@@ -1,17 +1,21 @@
 import random
 l=["r","p","s"]
+d={'r':'rock','p':'paper','s':'scissor'}
 cs,us=0,0
 
 while True:
 	#take input from user
 	u=input("enter your choice, press n to discontinue")
+	if u in d:
+		print("user chooses",d[u])
 	#to exit
 	if u=='n':
 		print("game over")
-		exit()
+		print("user score:",us)
+		print("comp score",cs)
 	#inputt from computer
 	c=random.choice(l)
-	print("computer choice",c)
+	print("computer choice",d[u])
 	#compare the user and computer choice
 	if u==c:
 		print("tie")

@@ -13,6 +13,11 @@ while True:
 		print("game over")
 		print("user score:",us)
 		print("comp score",cs)
+	if us>cs:
+		print("user wins")
+	elif cs>us:
+		print("comp wins")
+		exit()
 	#inputt from computer
 	c=random.choice(l)
 	print("computer choice",d[c])

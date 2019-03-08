@@ -1,5 +1,7 @@
 import random
 l=["r","p","s"]
+cs,us=0,0
+
 while True:
 	#take input from user
 	u=input("enter your choice, press n to discontinue")
@@ -14,12 +16,17 @@ while True:
 	if u==c:
 		print("tie")
 	elif u=="r" and c=="p":
-		print("comp wins")
+		cs=cs+1
+		print("comp wins",cs)
 	elif u=="r" and c=="s":
-		print("user wins")
+		us=us+1
+		print("user wins",us)
 	elif u=="p" and c=="r":
-		print("user wins")
+		us=us+1
+		print("user wins",us)
 	elif u=="p" and c=="s":
-		print("comp wins")
+		cs=cs+1
+		print("comp wins",cs)
 	elif u=="s" and c=="p":
-		print("comp wins")
+		cs=cs+1
+		print("comp wins",cs)
